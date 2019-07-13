@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Accessibility Reviews</title>
+
+<style>
+body, html{
+      height: 100%;
+      background: #687a8f;
+        font-family: 'Lato', sans-serif;
+    }
+
+input[type=text], select, input[type=number], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+        background-color : #d1d1d1;
+        font-size:15px;
+        color: #666666;
+}
+
+h1 {
+    height: 100px;
+    color: white;
+    background-color: #233237;
+    text-align: center;
+    font-size: 75px;
+    background-size: 100%
+}
+h2 {
+  color: white;
+  text-align: center;
+}
+h3 {
+  color: black;
+  text-align: left;
+}
+
+button {
+        width: 100%;
+        background-color: #a7b3a5;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #878f85;
+    }
+
+.body_style{
+  display: block;
+  position: relative;
+
+  margin: 40px auto;
+    margin-top: 0;
+  height: auto;
+  width: 900px;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+ td,  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+
+ tr:nth-child(odd){background-color: #f2f2f2;}
+ tr:nth-child(even){background-color: #f2f2f2;}
+ tr:hover {background-color: #ddd;}
+
+ th{
+    padding: 12px;
+    text-align: center;
+    background-color: #b56357;
+    color: white;
+}
+td{
+    text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+<h1>Accesibility Reviews</title></h1>
+<!-- Menu -->
+
+
+<!-- Main Content -->
+{% block body %}{% endblock %}
+
+</body>
+</html>
+
+
