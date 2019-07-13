@@ -1,33 +1,111 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block body %}
 
 
-<h1 style="text-align:center;">{PlaceName}</h1>
-<p style="text-align:center;">{LocationAddress}</p>
+<style>
+
+
+body  {
+background-image: url(https://image.freepik.com/free-photo/wood-table-top-blurred-cafe-interior-background-with-vintage-filter_7191-470.jpg);
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: centre;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+</style>
+
+<body>
+
+<h1 style="text-align:center">Cafe 42</h1>
+<p style="text-align:center">42 Hackathon Rd, Amazon</p>
+<p style="text-align:center">Contact: 02 9755 6721</p>
 
 <br>
 
-<p style="text-align:center;"> 
-<img src="https://image.flaticon.com/icons/svg/25/25186.svg" alt="eye" width="30" height="30"><&nbsp><&nbsp><img src="https://image.flaticon.com/icons/svg/1512/1512684.svg" alt="ear" width="30" height="30"><&nbsp><&nbsp><img src="https://image.flaticon.com/icons/svg/73/73412.svg" alt="wheelchair" width="30" height="30"></p>
 
-<p style="text-align:center;">{Eye_C}<&nbsp>{Ear_C}<&nbsp>{Wheel_C}</p>
-
+<table style="text-align:center">
+ <tbody>
+  <tr>
+    <td>
+<img src="https://image.flaticon.com/icons/svg/25/25186.svg" alt="eye" width="30" height="30">
+    </td>
+    <td>
+<img src="https://image.flaticon.com/icons/svg/1512/1512684.svg" alt="ear" width="30" height="30">
+    </td>
+    <td>
+<img src="https://image.flaticon.com/icons/svg/73/73412.svg" alt="wheelchair" width="30" height="30">
+    </td>
+   </tr>
+ 
+ <tr>
+    <td>
+        1
+    </td>
+    <td>
+        2
+    </td>
+    <td>
+        0
+    </td>
+   </tr>
+ 
+  </tbody>
+</table>
 
 <br>
 
-<p style="text-align:center;"> <button>Add a review</button> </p>
+<p> <button>Add a review</button> </p>
 
-
-<table style="width:100%">
-
+<table>
+<thead>
   <tr>
-    <th>Reviews</th>
+    <th colspan="2">Reviews</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+    <td>I was able to request a menu with larger font</td>
+    <td>
+<img src="https://photoartinc.com/wp-content/uploads/2018/03/stock-photos-woman-8.jpg" alt="ellie" width="30" height="30"> <i style="font-size:100%;"> &emsp;<br>Ellie Ryan</i></td>
   </tr>
   <tr>
-    <td>{I love this place it is awesome!}</td>
+    <td>Kind (and cute!) barista knows how to sign</td>
+    <td>
+<img src="https://feedback.seekingalpha.com/s/cache/f7/c5/f7c55d123b36436e8da6d719c1a4e6f7.png" alt="anon" width="30" height="30"> <i style="font-size:100%;"> &emsp;Anonymous</i></td>
   </tr>
+  <tr>
+    <td>Workers here know Auslan</td>
+    <td>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbeb4yELOYvpTokAOtmlH61Jze7CtFb-aoSDazRCcgqA3QNMA" alt="jasleen" width="30" height="30"> <i style="font-size:100%;"> &emsp;<br>Jas Singh</i></td>
+  </tr>
+  <tr>
+    <td>There are steps at the front of the cafe, however the owner did say that there is wheelchair access through a back entrance. </td>
+    <td>
+<img src="https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_black_1.jpg" alt="ear" width="30" height="30"> <i style="font-size:100%;"> &emsp;Chris Vine</i></td>
+  </tr>
+  </tbody>
 </table>
 
 
-{% endblock %}
+
+</body>
+</html>

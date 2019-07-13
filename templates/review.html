@@ -1,9 +1,32 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div>
-  <h2>some text</h2>
-</div>
+<h1 style="font-size:200%;"> Leave a review for {PlaceName}</h1><br>
+
+
+<form method="POST">
+
+ <img src="https://photoartinc.com/wp-content/uploads/2018/03/stock-photos-woman-8.jpg" alt="ear" width="80" height="82"> <i style="font-size:150%;"> &emsp;Ellie Ryan</i> <br><br>
+
+
+<!--- <input type="text" id="text" name="reviewText" style="width: 650px; height:250px" /> --->
+    <textarea name="reviewText" cols="140" rows="10"></textarea>
+
+
+<p>Check the applicable boxes<br><br>
+<form action="/action_page.php">
+  <input type="checkbox" name="visualRating" value="Visual"> Visual Imapairment &nbsp;<img src="https://image.flaticon.com/icons/svg/25/25186.svg" alt="eye" width="20" height="20">  &emsp;&emsp;
+
+ <input type="checkbox" name="auditoryRating" value="Auditory Rating"> Auditory  Imapairment &nbsp;<img src="https://image.flaticon.com/icons/svg/1512/1512684.svg" alt="ear" width="20" height="20"> &emsp;&emsp;
+
+  
+  <input type="checkbox" name="physicalRating" value="Physical Rating"> Physical Disability &nbsp;<img src= "https://image.flaticon.com/icons/svg/73/73412.svg" alt= "wheelchair" width ="20" height= "20"><br><br><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</p>
+
 
 
 

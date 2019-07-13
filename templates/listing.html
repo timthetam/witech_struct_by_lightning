@@ -1,10 +1,110 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block body %}
-<div>
-  <h2>some text</h2>
-</div>
+<style>
+
+body  {
+background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Solid-color-hd-wallpapers-download.jpg);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: centre;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+</style>
+<!-- <style="text-align:center;"> -->
+
+
+<h1>Food</h1>
+<p>See below reviews left by our users for all restaurants, cafes, food courts and diners in our database.</p>
+
+<!-- Asking users to add a new listing -->
+<p>If you can't find the listing you are looking for, please add to our database by creating a new listing.</p>
+
+<form method="get" action="{{ url_for('newPlace') }}">
+    <button type="submit"> Add New Listing </button>
+</form>
 
 
 
-{% endblock %}
+
+<table>
+  <caption> <h2>Food Listings Reviews </h2> </caption>
+  <tr>
+    <th>Listing</th>
+    <th> <img src="https://image.flaticon.com/icons/svg/25/25186.svg" alt="eye" width="30" height="30"> Friendly Reviews </th> 
+    <th> <img src="https://image.flaticon.com/icons/svg/1512/1512684.svg" alt="ear" width="30" height="30"> Friendly Reviews</th>
+    <th> <img src="https://image.flaticon.com/icons/svg/73/73412.svg" alt="ear" width="30" height="30"> Friendly Reviews</th>
+  </tr>
+  <tr>
+    <td> <button> Aarons Burgers </button></td>
+    <td> 1 </td> 
+    <td> 0 </td> 
+    <td> 2 </td>
+  </tr>
+  <tr>
+    <td><button> Breadtop </button></td>
+    <td>0</td> 
+    <td>0</td> 
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><form method="get" action="{{ url_for('places') }}">
+    <button type=submit>Cafe 42</button>
+</form></td>
+    <td>1</td> 
+    <td>2</td> 
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><button> Maccas </button></td>
+    <td>4</td> 
+    <td>1</td> 
+    <td>7</td>
+  </tr>
+  <tr>
+    <td><button> Panda Express </button></td>
+    <td>0</td> 
+    <td>3</td> 
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td><button> Time for Thai </button></td>
+    <td>1</td> 
+    <td>0</td> 
+    <td>0</td>
+  </tr>
+
+
+    {% if review["locationName"]|length != 0 %}
+      <tr>
+        <td><form method="get" action="{{ url_for('places2') }}">
+    <button type="submit"> {{ review['locationName'] }}  </button></form></td>
+        <td> {{ review['eye'] }} </td> 
+        <td> {{ review['ear'] }} </td> 
+        <td> {{ review['physical'] }} </td>
+      </tr>
+
+    {% endif %}
+
+</table>
+
+
+

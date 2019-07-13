@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+body  {
+background-image: url(https://image.freepik.com/free-photo/wood-table-top-blurred-cafe-interior-background-with-vintage-filter_7191-470.jpg);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: centre;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+</style>
+
+<body>
+
+<h1 style="text-align:center">{{ review['locationName'] }}</h1>
+<p style="text-align:center">{{ review['location'] }} </p>
+
+<br>
+
+
+<table style="text-align:center">
+ <tbody>
+  <tr>
+    <td>
+<img src="https://image.flaticon.com/icons/svg/25/25186.svg" alt="eye" width="30" height="30">
+    </td>
+    <td>
+<img src="https://image.flaticon.com/icons/svg/1512/1512684.svg" alt="ear" width="30" height="30">
+    </td>
+    <td>
+<img src="https://image.flaticon.com/icons/svg/73/73412.svg" alt="wheelchair" width="30" height="30">
+    </td>
+   </tr>
+ 
+ <tr>
+    <td>
+        {{ review['eye'] }}
+    </td>
+    <td>
+        {{ review['ear'] }}
+    </td>
+    <td>
+        {{ review['physical'] }}
+    </td>
+   </tr>
+ 
+  </tbody>
+</table>
+
+<br>
+
+<p> <form method="get" action="{{ url_for('addReview') }}">
+    <button type= "submit">Add a review</button></form> </p>
+
+  {% if review["content"]|length != 0 %}
+
+  <table>
+  <thead>
+    <tr>
+      <th colspan="2">Reviews</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+      <td> {{ review["content"] }}</td>
+      <td>
+  <img src="https://feedback.seekingalpha.com/s/cache/f7/c5/f7c55d123b36436e8da6d719c1a4e6f7.png" alt="anon" width="30" height="30"> <i style="font-size:100%;"> &emsp;<br>Anonymous</i></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  {% else %}
+  <p>There are no reviews for this listing.</p>
+{% endif %}

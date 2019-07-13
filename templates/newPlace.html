@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+body  {
+background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Solid-color-hd-wallpapers-download.jpg);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: centre;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+</style>
+<h1 style="text-align:center">New Location</h1>
+
+{% block body %}
+
+
+<h3>Enter the details for the Food place:</h3>
+
+<form method="POST">
+  Name of Location: <input type="text" name="locationName"><br>
+  Location: <input type="text" name="location"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
